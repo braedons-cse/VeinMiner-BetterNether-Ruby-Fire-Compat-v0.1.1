@@ -1,0 +1,30 @@
+VeinMiner + BetterNether Ruby Fire Compat 0.1.1
+
+Fix from 0.1.0:
+- Corrected temporary compile stubs for Sponge Mixin @Mixin and @Pseudo from
+  RetentionPolicy.RUNTIME to RetentionPolicy.CLASS.
+- Verified the resulting VeinMinerEventMixin.class stores both annotations in
+  RuntimeInvisibleAnnotations, which is exactly where Sponge Mixin reads them.
+
+Validation performed:
+- Java release: 21
+- Local target environment from user crash log: Minecraft 1.21.1 / NeoForge 21.1.233
+- Compile: PASS
+- Target: de.miraculixx.veinminer.event.VeinMinerEvent
+- Redirect method: improvedDropResources
+- Redirect invocation descriptor:
+  Block.getDrops(BlockState, ServerLevel, BlockPos, BlockEntity, Entity, ItemStack) -> java.util.List
+- @Mixin + @Pseudo classfile placement: RuntimeInvisibleAnnotations PASS
+- @Redirect method annotation placement: RuntimeVisibleAnnotations PASS
+- Registry getOrThrow descriptor uses Holder.Reference return type
+- Recipe.getResultItem descriptor uses HolderLookup.Provider
+- Recipe.getIngredients descriptor uses NonNullList
+- ItemStack count replacement uses copyWithCount(int)
+- Fail-open catch covers RuntimeException and LinkageError after original drop calculation
+
+Not performed:
+- Full Minecraft/NeoForge launch with the user's complete mod set
+- In-world mining test
+
+This remains an intentionally narrow test build for Minecraft 1.21.1,
+NeoForge 21.1.x, Miraculixx VeinMiner 2.10.1, and BetterNether 21.0.x Ruby Fire.
