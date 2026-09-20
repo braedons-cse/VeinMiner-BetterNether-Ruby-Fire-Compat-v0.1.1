@@ -1,0 +1,47 @@
+# Gradle
+.gradle/
+build/
+out/
+
+# Minecraft / NeoForge run directories
+run/
+runs/
+logs/
+crash-reports/
+
+# Java
+*.class
+hs_err_pid*
+replay_pid*
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Local environment files
+.env
+.env.*
+!.env.example

@@ -2,6 +2,32 @@
 
 A small compatibility patch (mod) for **Minecraft 1.21.1** that allows BetterNether's **Ruby's Fire** enchantment to work correctly with **Miraculixx VeinMiner**.
 
+## Building from Source
+
+### Requirements
+
+- JDK **21**
+
+Clone the repository and build with the included Gradle wrapper.
+
+On Windows:
+
+```powershell
+.\gradlew.bat build
+```
+
+On Linux/macOS:
+
+```bash
+./gradlew build
+```
+
+The compiled JAR will be written to:
+
+```text
+build/libs/
+```
+
 ## The Problem
 
 BetterNether's Ruby's Fire enchantment automatically smelts compatible block drops when mining.
