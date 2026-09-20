@@ -1,6 +1,6 @@
 # VeinMiner BetterNether Ruby Fire Compat
 
-A small compatibility patch for **Minecraft 1.21.1** that allows BetterNether's **Ruby's Fire** enchantment to work correctly with **Miraculixx VeinMiner**.
+A small compatibility patch (mod) for **Minecraft 1.21.1** that allows BetterNether's **Ruby's Fire** enchantment to work correctly with **Miraculixx VeinMiner**.
 
 ## The Problem
 
